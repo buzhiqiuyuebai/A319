@@ -1,0 +1,42 @@
+@node06:~/temp/ExamplesOld/plane/A319meshsize0.6m $ pumgen loh.msh -s msh2
+
+--------------------------------------------------------------------------
+Mon Feb 13 00:03:28, Info:  Using GMSH mesh format 2 (msh2) mesh 
+Mon Feb 13 00:04:56, Info:  Create APF connectivity 
+[node06:34712:0:34712] Caught signal 11 (Segmentation fault: address not mapped to object at address 0xffffffffc0000004)
+==== backtrace (tid:  34712) ====
+ 0 0x000000000004d455 ucs_debug_print_backtrace()  ???:0
+ 1 0x00000000006d45d8 mds_create_entity()  ???:0
+ 2 0x00000000006d5664 mds_apf_create_entity()  ???:0
+ 3 0x00000000006cfc17 apf::MeshMDS::createEntity_()  ???:0
+ 4 0x000000000070b0ab apf::ElementBuilder::apply()  ???:0
+ 5 0x000000000070656f apf::runTetDown()  apfMesh.cc:0
+ 6 0x000000000070692d apf::ElementVertOp::run()  ???:0
+ 7 0x0000000000709b5b apf::buildElement()  ???:0
+ 8 0x000000000078dd29 apf::assemble()  ???:0
+ 9 0x000000000078dd82 apf::construct()  ???:0
+10 0x0000000000424a7b SerialMeshFile<puml::ParallelGMSHReader>::open()  ???:0
+11 0x00000000004124d1 main()  ???:0
+12 0x0000000000022555 __libc_start_main()  ???:0
+13 0x000000000041400f _start()  ???:0
+=================================
+[node06:34712] *** Process received signal ***
+[node06:34712] Signal: Segmentation fault (11)
+[node06:34712] Signal code:  (-6)
+[node06:34712] Failing at address: 0x3f800008798
+[node06:34712] [ 0] /lib64/libpthread.so.0(+0xf630)[0x7f44cc5c3630]
+[node06:34712] [ 1] pumgen[0x6d45d8]
+[node06:34712] [ 2] pumgen[0x6d5664]
+[node06:34712] [ 3] pumgen[0x6cfc17]
+[node06:34712] [ 4] pumgen[0x70b0ab]
+[node06:34712] [ 5] pumgen[0x70656f]
+[node06:34712] [ 6] pumgen[0x70692d]
+[node06:34712] [ 7] pumgen[0x709b5b]
+[node06:34712] [ 8] pumgen[0x78dd29]
+[node06:34712] [ 9] pumgen[0x78dd82]
+[node06:34712] [10] pumgen[0x424a7b]
+[node06:34712] [11] pumgen[0x4124d1]
+[node06:34712] [12] /lib64/libc.so.6(__libc_start_main+0xf5)[0x7f44cc208555]
+[node06:34712] [13] pumgen[0x41400f]
+[node06:34712] *** End of error message ***
+Segmentation fault (core dumped)

@@ -1,0 +1,559 @@
+Sun Feb 12 20:03:13, Info:  Waiting for last wave field. 
+Sun Feb 12 20:03:13, Info:  Writing wave field at time 0.
+Sun Feb 12 20:03:28, Info:  Writing wave field at time 0. Done.
+Sun Feb 12 20:03:29, Info:  Writing free surface at time 0.
+Sun Feb 12 20:03:29, Info:  Writing free surface at time 0. Done.
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7ff490762405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7ff490537ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7ff48edc8b0d]
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 12 in communicator MPI_COMM_WORLD
+with errorcode 134.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+*** Error in `./SeisSol_Release_shsw_6_elastic': double free or corruption (!prev): 0x00007f3768000d80 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x81329)[0x7f406b12f329]
+/lib64/libc.so.6(fclose+0x177)[0x7f406b11c247]
+/home/ccx/lib/libopen-pal.so.40(opal_show_help_vstring+0x20e)[0x7f406b01662e]
+/home/ccx/lib/libopen-rte.so.40(orte_show_help+0xc3)[0x7f406d00aec3]
+/home/ccx/lib/libmpi.so.40(MPI_Abort+0x6c)[0x7f406c85080c]
+./SeisSol_Release_shsw_6_elastic[0x432482]
+./SeisSol_Release_shsw_6_elastic[0x548c55]
+/lib64/libgomp.so.1(+0x16405)[0x7f406cb46405]
+/lib64/libpthread.so.0(+0x7ea5)[0x7f406c91bea5]
+/lib64/libc.so.6(clone+0x6d)[0x7f406b1acb0d]
+======= Memory map: ========
+00400000-00411000 r--p 00000000 00:2d 258539680                          /home/ccx/temp/ExamplesOld/Skull/skullorder6/SeisSol_Release_shsw_6_elastic
+00411000-00d35000 r-xp 00011000 00:2d 258539680                          /home/ccx/temp/ExamplesOld/Skull/skullorder6/SeisSol_Release_shsw_6_elastic
+00d35000-0104e000 r--p 00935000 00:2d 258539680                          /home/ccx/temp/ExamplesOld/Skull/skullorder6/SeisSol_Release_shsw_6_elastic
+0104f000-01058000 r--p 00c4e000 00:2d 258539680                          /home/ccx/temp/ExamplesOld/Skull/skullorder6/SeisSol_Release_shsw_6_elastic
+01058000-01061000 rw-p 00c57000 00:2d 258539680                          /home/ccx/temp/ExamplesOld/Skull/skullorder6/SeisSol_Release_shsw_6_elastic
+01061000-0107d000 rw-p 00000000 00:00 0 
+018a6000-43b74000 rw-p 00000000 00:00 0                                  [heap]
+7f3357ff9000-7f3357ffa000 ---p 00000000 00:00 0 
+7f3357ffa000-7f33d7ffa000 rw-p 00000000 00:00 0 
+7f3557ffd000-7f3557ffe000 ---p 00000000 00:00 0 
+7f3557ffe000-7f35d7ffe000 rw-p 00000000 00:00 0 
+7f36d8000000-7f36d8022000 rw-p 00000000 00:00 0 
+7f36d8022000-7f36dc000000 ---p 00000000 00:00 0 
+7f36dffff000-7f36e0000000 ---p 00000000 00:00 0 
+7f36e0000000-7f3760000000 rw-p 00000000 00:00 0 
+7f3760000000-7f3760021000 rw-p 00000000 00:00 0 
+7f3760021000-7f3764000000 ---p 00000000 00:00 0 
+7f3768000000-7f3768021000 rw-p 00000000 00:00 0 
+7f3768021000-7f376c000000 ---p 00000000 00:00 0 
+7f3770000000-7f3770021000 rw-p 00000000 00:00 0 
+7f3770021000-7f3774000000 ---p 00000000 00:00 0 
+7f3778000000-7f3778021000 rw-p 00000000 00:00 0 
+7f3778021000-7f377c000000 ---p 00000000 00:00 0 
+7f3780000000-7f3780021000 rw-p 00000000 00:00 0 
+7f3780021000-7f3784000000 ---p 00000000 00:00 0 
+7f3788000000-7f3788021000 rw-p 00000000 00:00 0 
+7f3788021000-7f378c000000 ---p 00000000 00:00 0 
+7f3790000000-7f3790021000 rw-p 00000000 00:00 0 
+7f3790021000-7f3794000000 ---p 00000000 00:00 0 
+7f3798000000-7f3798021000 rw-p 00000000 00:00 0 
+7f3798021000-7f379c000000 ---p 00000000 00:00 0 
+7f37a0000000-7f37a0021000 rw-p 00000000 00:00 0 
+7f37a0021000-7f37a4000000 ---p 00000000 00:00 0 
+7f37a8000000-7f37a8021000 rw-p 00000000 00:00 0 
+7f37a8021000-7f37ac000000 ---p 00000000 00:00 0 
+7f37b0000000-7f37b0021000 rw-p 00000000 00:00 0 
+7f37b0021000-7f37b4000000 ---p 00000000 00:00 0 
+7f37b5cc8000-7f3954435000 rw-p 00000000 00:00 0 
+7f39550d4000-7f395b5b9000 rw-p 00000000 00:00 0 
+7f395b5b9000-7f395b6c0000 rw-s 00000000 00:13 458267                     /dev/shm/ucx_shm_posix_e3a93ce (deleted)
+7f395b6c0000-7f395b7c7000 rw-s 00000000 00:13 442116                     /dev/shm/ucx_shm_posix_15849f76 (deleted)
+7f395b7c7000-7f395b8ce000 rw-s 00000000 00:13 458540                     /dev/shm/ucx_shm_posix_5470fb5a (deleted)
+7f395b8ce000-7f395b9d5000 rw-s 00000000 00:13 442312                     /dev/shm/ucx_shm_posix_72f8a15f (deleted)
+7f395b9d5000-7f395badc000 rw-s 00000000 00:13 442147                     /dev/shm/ucx_shm_posix_5632f4a0 (deleted)
+7f395badc000-7f395bbe3000 rw-s 00000000 00:13 458223                     /dev/shm/ucx_shm_posix_48370f4 (deleted)
+7f395bbe3000-7f395bcea000 rw-s 00000000 00:13 442269                     /dev/shm/ucx_shm_posix_11c900bb (deleted)
+7f395bcea000-7f395bdf1000 rw-s 00000000 00:13 442041                     /dev/shm/ucx_shm_posix_602e92b9 (deleted)
+7f395bdf1000-7f395bef8000 rw-s 00000000 00:13 458561                     /dev/shm/ucx_shm_posix_1b623be3 (deleted)
+7f395bef8000-7f395bfff000 rw-s 00000000 00:13 442126                     /dev/shm/ucx_shm_posix_52ef30bd (deleted)
+7f395bfff000-7f395c000000 ---p 00000000 00:00 0 
+7f395c000000-7f39dc000000 rw-p 00000000 00:00 0 
+7f39dc000000-7f39dc021000 rw-p 00000000 00:00 0 
+7f39dc021000-7f39e0000000 ---p 00000000 00:00 0 
+7f39e0d6f000-7f39e0d71000 r--p 00000000 00:2d 253854614                  /home/ccx/lib/openmpi/mca_sharedfp_individual.so
+7f39e0d71000-7f39e0d74000 r-xp 00002000 00:2d 253854614                  /home/ccx/lib/openmpi/mca_sharedfp_individual.so
+7f39e0d74000-7f39e0d76000 r--p 00005000 00:2d 253854614                  /home/ccx/lib/openmpi/mca_sharedfp_individual.so
+7f39e0d76000-7f39e0d77000 r--p 00006000 00:2d 253854614                  /home/ccx/lib/openmpi/mca_sharedfp_individual.so
+7f39e0d77000-7f39e0d78000 rw-p 00007000 00:2d 253854614                  /home/ccx/lib/openmpi/mca_sharedfp_individual.so
+7f39e0d78000-7f39e0d7a000 r--p 00000000 00:2d 253854618                  /home/ccx/lib/openmpi/mca_sharedfp_sm.so
+7f39e0d7a000-7f39e0d7d000 r-xp 00002000 00:2d 253854618                  /home/ccx/lib/openmpi/mca_sharedfp_sm.so
+7f39e0d7d000-7f39e0d7f000 r--p 00005000 00:2d 253854618                  /home/ccx/lib/openmpi/mca_sharedfp_sm.so
+7f39e0d7f000-7f39e0d80000 r--p 00006000 00:2d 253854618                  /home/ccx/lib/openmpi/mca_sharedfp_sm.so
+7f39e0d80000-7f39e0d81000 rw-p 00007000 00:2d 253854618                  /home/ccx/lib/openmpi/mca_sharedfp_sm.so
+7f39e0d81000-7f39e0d83000 r--p 00000000 00:2d 253854616                  /home/ccx/lib/openmpi/mca_sharedfp_lockedfile.so
+7f39e0d83000-7f39e0d86000 r-xp 00002000 00:2d 253854616                  /home/ccx/lib/openmpi/mca_sharedfp_lockedfile.so
+7f39e0d86000-7f39e0d88000 r--p 00005000 00:2d 253854616                  /home/ccx/lib/openmpi/mca_sharedfp_lockedfile.so
+7f39e0d88000-7f39e0d89000 r--p 00006000 00:2d 253854616                  /home/ccx/lib/openmpi/mca_sharedfp_lockedfile.so
+7f39e0d89000-7f39e0d8a000 rw-p 00007000 00:2d 253854616                  /home/ccx/lib/openmpi/mca_sharedfp_lockedfile.so
+7f39e0d8a000-7f39e0d8c000 r--p 00000000 00:2d 253854574                  /home/ccx/lib/openmpi/mca_fbtl_posix.so
+7f39e0d8c000-7f39e0d8e000 r-xp 00002000 00:2d 253854574                  /home/ccx/lib/openmpi/mca_fbtl_posix.so
+7f39e0d8e000-7f39e0d8f000 r--p 00004000 00:2d 253854574                  /home/ccx/lib/openmpi/mca_fbtl_posix.so
+7f39e0d8f000-7f39e0d90000 r--p 00004000 00:2d 253854574                  /home/ccx/lib/openmpi/mca_fbtl_posix.so
+7f39e0d90000-7f39e0d91000 rw-p 00005000 00:2d 253854574                  /home/ccx/lib/openmpi/mca_fbtl_posix.so
+7f39e0d91000-7f39e0d92000 r--p 00000000 00:2d 253854576                  /home/ccx/lib/openmpi/mca_fcoll_dynamic.so
+7f39e0d92000-7f39e0d97000 r-xp 00001000 00:2d 253854576                  /home/ccx/lib/openmpi/mca_fcoll_dynamic.so
+7f39e0d97000-7f39e0d98000 r--p 00006000 00:2d 253854576                  /home/ccx/lib/openmpi/mca_fcoll_dynamic.so
+7f39e0d98000-7f39e0d99000 r--p 00006000 00:2d 253854576                  /home/ccx/lib/openmpi/mca_fcoll_dynamic.so
+7f39e0d99000-7f39e0d9a000 rw-p 00007000 00:2d 253854576                  /home/ccx/lib/openmpi/mca_fcoll_dynamic.so
+7f39e0d9a000-7f39e0d9c000 r--p 00000000 00:2d 253854582                  /home/ccx/lib/openmpi/mca_fcoll_two_phase.so
+7f39e0d9c000-7f39e0da3000 r-xp 00002000 00:2d 253854582                  /home/ccx/lib/openmpi/mca_fcoll_two_phase.so
+7f39e0da3000-7f39e0da4000 r--p 00009000 00:2d 253854582                  /home/ccx/lib/openmpi/mca_fcoll_two_phase.so
+7f39e0da4000-7f39e0da5000 r--p 00009000 00:2d 253854582                  /home/ccx/lib/openmpi/mca_fcoll_two_phase.so
+7f39e0da5000-7f39e0da6000 rw-p 0000a000 00:2d 253854582                  /home/ccx/lib/openmpi/mca_fcoll_two_phase.so
+7f39e0da6000-7f39e0da8000 r--p 00000000 00:2d 253854584                  /home/ccx/lib/openmpi/mca_fcoll_vulcan.so
+7f39e0da8000-7f39e0dae000 r-xp 00002000 00:2d 253854584                  /home/ccx/lib/openmpi/mca_fcoll_vulcan.so
+7f39e0dae000-7f39e0daf000 r--p 00008000 00:2d 253854584                  /home/ccx/lib/openmpi/mca_fcoll_vulcan.so
+7f39e0daf000-7f39e0db0000 r--p 00008000 00:2d 253854584                  /home/ccx/lib/openmpi/mca_fcoll_vulcan.so
+7f39e0db0000-7f39e0db1000 rw-p 00009000 00:2d 253854584                  /home/ccx/lib/openmpi/mca_fcoll_vulcan.so
+7f39e0db1000-7f39e0db3000 r--p 00000000 00:2d 253854578                  /home/ccx/lib/openmpi/mca_fcoll_dynamic_gen2.so
+7f39e0db3000-7f39e0db9000 r-xp 00002000 00:2d 253854578                  /home/ccx/lib/openmpi/mca_fcoll_dynamic_gen2.so
+7f39e0db9000-7f39e0dba000 r--p 00008000 00:2d 253854578                  /home/ccx/lib/openmpi/mca_fcoll_dynamic_gen2.so
+7f39e0dba000-7f39e0dbb000 r--p 00008000 00:2d 253854578                  /home/ccx/lib/openmpi/mca_fcoll_dynamic_gen2.so
+7f39e0dbb000-7f39e0dbc000 rw-p 00009000 00:2d 253854578                  /home/ccx/lib/openmpi/mca_fcoll_dynamic_gen2.so
+7f39e0dbc000-7f39e0dc6000 r--p 00000000 00:2d 253854590                  /home/ccx/lib/openmpi/mca_io_romio321.so
+7f39e0dc6000-7f39e0dfa000 r-xp 0000a000 00:2d 253854590                  /home/ccx/lib/openmpi/mca_io_romio321.so
+7f39e0dfa000-7f39e0e04000 r--p 0003e000 00:2d 253854590                  /home/ccx/lib/openmpi/mca_io_romio321.so
+7f39e0e04000-7f39e0e05000 r--p 00047000 00:2d 253854590                  /home/ccx/lib/openmpi/mca_io_romio321.so
+7f39e0e05000-7f39e0e07000 rw-p 00048000 00:2d 253854590                  /home/ccx/lib/openmpi/mca_io_romio321.so
+7f39e0e07000-7f39e0e0a000 r--p 00000000 00:2d 253266228                  /home/ccx/lib/libmca_common_ompio.so.41.29.0
+7f39e0e0a000-7f39e0e12000 r-xp 00003000 00:2d 253266228                  /home/ccx/lib/libmca_common_ompio.so.41.29.0
+7f39e0e12000-7f39e0e14000 r--p 0000b000 00:2d 253266228                  /home/ccx/lib/libmca_common_ompio.so.41.29.0
+7f39e0e14000-7f39e0e15000 ---p 0000d000 00:2d 253266228                  /home/ccx/lib/libmca_common_ompio.so.41.29.0
+7f39e0e15000-7f39e0e16000 r--p 0000d000 00:2d 253266228                  /home/ccx/lib/libmca_common_ompio.so.41.29.0
+7f39e0e16000-7f39e0e17000 rw-p 0000e000 00:2d 253266228                  /home/ccx/lib/libmca_common_ompio.so.41.29.0
+7f39e0e17000-7f39e1cf2000 rw-p 00000000 00:00 0 
+7f39e1cf2000-7f39e1df9000 rw-s 00000000 00:13 442303                     /dev/shm/ucx_shm_posix_22d20626 (deleted)
+7f39e1df9000-7f39e1f00000 rw-s 00000000 00:13 458552                     /dev/shm/ucx_shm_posix_30141524 (deleted)
+7f39e1f00000-7f39e2007000 rw-s 00000000 00:13 458660                     /dev/shm/ucx_shm_posix_4caf471c (deleted)
+7f39e2007000-7f39e210e000 rw-s 00000000 00:13 458658                     /dev/shm/ucx_shm_posix_de60fd9 (deleted)
+7f39e210e000-7f39e2215000 rw-s 00000000 00:13 442248                     /dev/shm/ucx_shm_posix_284ab813 (deleted)
+7f39e2215000-7f39e2255000 rw-p 00000000 00:00 0 
+7f39e2255000-7f39e242a000 rw-p 00000000 00:00 0 
+7f39e242a000-7f39e2453000 rw-p 00000000 00:00 0 
+7f39e2453000-7f39e24d3000 rw-p 00000000 00:00 0 
+7f39e24d3000-7f39e25da000 rw-s 00000000 00:04 1802294                    /SYSV00000000 (deleted)
+7f39e25da000-7f39e26e1000 rw-s 00000000 00:13 458430                     /dev/shm/ucx_shm_posix_4086556b (deleted)
+7f39e26e1000-7f39e2739000 rw-p 00000000 00:00 0 
+7f39e2739000-7f39e273d000 r-xp 00000000 08:02 12471242                   /usr/lib64/libibcm.so.1.0.0
+7f39e273d000-7f39e293c000 ---p 00004000 08:02 12471242                   /usr/lib64/libibcm.so.1.0.0
+7f39e293c000-7f39e293d000 r--p 00003000 08:02 12471242                   /usr/lib64/libibcm.so.1.0.0
+7f39e293d000-7f39e293e000 rw-p 00004000 08:02 12471242                   /usr/lib64/libibcm.so.1.0.0
+7f39e293e000-7f39e2943000 r-xp 00000000 08:02 14821796                   /usr/lib64/ucx/libuct_ib_cm.so.0.0.0
+7f39e2943000-7f39e2b42000 ---p 00005000 08:02 14821796                   /usr/lib64/ucx/libuct_ib_cm.so.0.0.0
+7f39e2b42000-7f39e2b43000 r--p 00004000 08:02 14821796                   /usr/lib64/ucx/libuct_ib_cm.so.0.0.0
+7f39e2b43000-7f39e2b44000 rw-p 00005000 08:02 14821796                   /usr/lib64/ucx/libuct_ib_cm.so.0.0.0
+7f39e2b44000-7f39e2b48000 r-xp 00000000 08:02 14821800                   /usr/lib64/ucx/libuct_knem.so.0.0.0
+7f39e2b48000-7f39e2d47000 ---p 00004000 08:02 14821800                   /usr/lib64/ucx/libuct_knem.so.0.0.0
+7f39e2d47000-7f39e2d48000 r--p 00003000 08:02 14821800                   /usr/lib64/ucx/libuct_knem.so.0.0.0
+7f39e2d48000-7f39e2d49000 rw-p 00004000 08:02 14821800                   /usr/lib64/ucx/libuct_knem.so.0.0.0
+7f39e2d49000-7f39e2d63000 r-xp 00000000 08:02 12471260                   /usr/lib64/librdmacm.so.1.0.0
+7f39e2d63000-7f39e2f62000 ---p 0001a000 08:02 12471260                   /usr/lib64/librdmacm.so.1.0.0
+7f39e2f62000-7f39e2f63000 r--p 00019000 08:02 12471260                   /usr/lib64/librdmacm.so.1.0.0
+7f39e2f63000-7f39e2f64000 rw-p 0001a000 08:02 12471260                   /usr/lib64/librdmacm.so.1.0.0
+7f39e2f64000-7f39e2f65000 rw-p 00000000 00:00 0 
+7f39e2f65000-7f39e2fc0000 r-xp 00000000 08:02 14821794                   /usr/lib64/ucx/libuct_ib.so.0.0.0
+7f39e2fc0000-7f39e31bf000 ---p 0005b000 08:02 14821794                   /usr/lib64/ucx/libuct_ib.so.0.0.0
+7f39e31bf000-7f39e31c0000 r--p 0005a000 08:02 14821794                   /usr/lib64/ucx/libuct_ib.so.0.0.0
+7f39e31c0000-7f39e31c6000 rw-p 0005b000 08:02 14821794                   /usr/lib64/ucx/libuct_ib.so.0.0.0
+7f39e31c6000-7f39e3307000 r-xp 00000000 08:02 12473604                   /usr/lib64/libucs.so.0.0.0
+7f39e3307000-7f39e3506000 ---p 00141000 08:02 12473604                   /usr/lib64/libucs.so.0.0.0
+7f39e3506000-7f39e3519000 r--p 00140000 08:02 12473604                   /usr/lib64/libucs.so.0.0.0
+7f39e3519000-7f39e3521000 rw-p 00153000 08:02 12473604                   /usr/lib64/libucs.so.0.0.0
+7f39e3521000-7f39e3528000 rw-p 00000000 00:00 0 
+7f39e3528000-7f39e353a000 r-xp 00000000 08:02 12473600                   /usr/lib64/libucm.so.0.0.0
+7f39e353a000-7f39e3739000 ---p 00012000 08:02 12473600                   /usr/lib64/libucm.so.0.0.0
+7f39e3739000-7f39e373a000 r--p 00011000 08:02 12473600                   /usr/lib64/libucm.so.0.0.0
+7f39e373a000-7f39e373b000 rw-p 00012000 08:02 12473600                   /usr/lib64/libucm.so.0.0.0
+7f39e373b000-7f39e373c000 rw-p 00000000 00:00 0 
+7f39e373c000-7f39e3762000 r-xp 00000000 08:02 12473606                   /usr/lib64/libuct.so.0.0.0
+7f39e3762000-7f39e3962000 ---p 00026000 08:02 12473606                   /usr/lib64/libuct.so.0.0.0
+7f39e3962000-7f39e3963000 r--p 00026000 08:02 12473606                   /usr/lib64/libuct.so.0.0.0
+7f39e3963000-7f39e3967000 rw-p 00027000 08:02 12473606                   /usr/lib64/libuct.so.0.0.0
+7f39e3967000-7f39e3985000 r-xp 00000000 08:02 12452849                   /usr/lib64/libnl-3.so.200.23.0
+7f39e3985000-7f39e3b85000 ---p 0001e000 08:02 12452849                   /usr/lib64/libnl-3.so.200.23.0
+7f39e3b85000-7f39e3b87000 r--p 0001e000 08:02 12452849                   /usr/lib64/libnl-3.so.200.23.0
+7f39e3b87000-7f39e3b88000 rw-p 00020000 08:02 12452849                   /usr/lib64/libnl-3.so.200.23.0
+7f39e3b88000-7f39e3bec000 r-xp 00000000 08:02 12452857                   /usr/lib64/libnl-route-3.so.200.23.0
+7f39e3bec000-7f39e3deb000 ---p 00064000 08:02 12452857                   /usr/lib64/libnl-route-3.so.200.23.0
+7f39e3deb000-7f39e3dee000 r--p 00063000 08:02 12452857                   /usr/lib64/libnl-route-3.so.200.23.0
+7f39e3dee000-7f39e3df3000 rw-p 00066000 08:02 12452857                   /usr/lib64/libnl-route-3.so.200.23.0
+7f39e3df3000-7f39e3df5000 rw-p 00000000 00:00 0 
+7f39e3df5000-7f39e3df6000 r--p 00000000 00:2d 253854580                  /home/ccx/lib/openmpi/mca_fcoll_individual.so
+7f39e3df6000-7f39e3df7000 r-xp 00001000 00:2d 253854580                  /home/ccx/lib/openmpi/mca_fcoll_individual.so
+7f39e3df7000-7f39e3df8000 r--p 00002000 00:2d 253854580                  /home/ccx/lib/openmpi/mca_fcoll_individual.so
+7f39e3df8000-7f39e3df9000 r--p 00002000 00:2d 253854580                  /home/ccx/lib/openmpi/mca_fcoll_individual.so
+7f39e3df9000-7f39e3dfa000 rw-p 00003000 00:2d 253854580                  /home/ccx/lib/openmpi/mca_fcoll_individual.so
+7f39e3dfa000-7f39e3dfd000 r-xp 00000000 08:02 14821792                   /usr/lib64/ucx/libuct_cma.so.0.0.0
+7f39e3dfd000-7f39e3ffd000 ---p 00003000 08:02 14821792                   /usr/lib64/ucx/libuct_cma.so.0.0.0
+7f39e3ffd000-7f39e3ffe000 r--p 00003000 08:02 14821792                   /usr/lib64/ucx/libuct_cma.so.0.0.0
+7f39e3ffe000-7f39e3fff000 rw-p 00004000 08:02 14821792                   /usr/lib64/ucx/libuct_cma.so.0.0.0
+7f39e3fff000-7f39e4000000 ---p 00000000 00:00 0 
+7f39e4000000-7f3a64000000 rw-p 00000000 00:00 0 
+7f3a64000000-7f3a64021000 rw-p 00000000 00:00 0 
+7f3a64021000-7f3a68000000 ---p 00000000 00:00 0 
+7f3a68004000-7f3a68005000 r--p 00000000 00:2d 253854586                  /home/ccx/lib/openmpi/mca_fs_ufs.so
+7f3a68005000-7f3a68006000 r-xp 00001000 00:2d 253854586                  /home/ccx/lib/openmpi/mca_fs_ufs.so
+7f3a68006000-7f3a68007000 r--p 00002000 00:2d 253854586                  /home/ccx/lib/openmpi/mca_fs_ufs.so
+7f3a68007000-7f3a68008000 r--p 00002000 00:2d 253854586                  /home/ccx/lib/openmpi/mca_fs_ufs.so
+7f3a68008000-7f3a68009000 rw-p 00003000 00:2d 253854586                  /home/ccx/lib/openmpi/mca_fs_ufs.so
+7f3a68009000-7f3a6800c000 r--p 00000000 00:2d 253854588                  /home/ccx/lib/openmpi/mca_io_ompio.so
+7f3a6800c000-7f3a68010000 r-xp 00003000 00:2d 253854588                  /home/ccx/lib/openmpi/mca_io_ompio.so
+7f3a68010000-7f3a68012000 r--p 00007000 00:2d 253854588                  /home/ccx/lib/openmpi/mca_io_ompio.so
+7f3a68012000-7f3a68013000 r--p 00008000 00:2d 253854588                  /home/ccx/lib/openmpi/mca_io_ompio.so
+7f3a68013000-7f3a68014000 rw-p 00009000 00:2d 253854588                  /home/ccx/lib/openmpi/mca_io_ompio.so
+7f3a68014000-7f3a68054000 rw-p 00000000 00:00 0 
+7f3a68054000-7f3a681d6000 rw-p 00000000 00:00 0 
+7f3a681d6000-7f3a681ee000 r-xp 00000000 08:02 12460628                   /usr/lib64/libibverbs.so.1.0.0
+7f3a681ee000-7f3a683ed000 ---p 00018000 08:02 12460628                   /usr/lib64/libibverbs.so.1.0.0
+7f3a683ed000-7f3a683ee000 r--p 00017000 08:02 12460628                   /usr/lib64/libibverbs.so.1.0.0
+7f3a683ee000-7f3a683ef000 rw-p 00018000 08:02 12460628                   /usr/lib64/libibverbs.so.1.0.0
+7f3a683ef000-7f3a683f2000 rw-s 00000000 00:13 442246                     /dev/shm/ucx_shm_posix_184e29b0 (deleted)
+7f3a683f2000-7f3a683f5000 rw-s 00000000 00:13 458651                     /dev/shm/ucx_shm_posix_133e0b1a (deleted)
+7f3a683f5000-7f3a68400000 r-xp 00000000 08:02 14821798                   /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7f3a68400000-7f3a685ff000 ---p 0000b000 08:02 14821798                   /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7f3a685ff000-7f3a68600000 r--p 0000a000 08:02 14821798                   /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7f3a68600000-7f3a68601000 rw-p 0000b000 08:02 14821798                   /usr/lib64/ucx/libuct_rdmacm.so.0.0.0
+7f3a68601000-7f3a6865a000 r-xp 00000000 08:02 12473602                   /usr/lib64/libucp.so.0.0.0
+7f3a6865a000-7f3a68859000 ---p 00059000 08:02 12473602                   /usr/lib64/libucp.so.0.0.0
+7f3a68859000-7f3a6885a000 r--p 00058000 08:02 12473602                   /usr/lib64/libucp.so.0.0.0
+7f3a6885a000-7f3a6885d000 rw-p 00059000 08:02 12473602                   /usr/lib64/libucp.so.0.0.0
+7f3a6885d000-7f3a68880000 rw-p 00000000 00:00 0 
+7f3a68882000-7f3a6888c000 rw-p 00000000 00:00 0 
+7f3a6888c000-7f3a68895000 rw-p 00000000 00:00 0 
+7f3a68895000-7f3a68897000 r--p 00000000 00:2d 253854594                  /home/ccx/lib/openmpi/mca_osc_sm.so
+7f3a68897000-7f3a6889a000 r-xp 00002000 00:2d 253854594                  /home/ccx/lib/openmpi/mca_osc_sm.so
+7f3a6889a000-7f3a6889b000 r--p 00005000 00:2d 253854594                  /home/ccx/lib/openmpi/mca_osc_sm.so
+7f3a6889b000-7f3a6889c000 r--p 00005000 00:2d 253854594                  /home/ccx/lib/openmpi/mca_osc_sm.so
+7f3a6889c000-7f3a6889e000 rw-p 00006000 00:2d 253854594                  /home/ccx/lib/openmpi/mca_osc_sm.so
+7f3a6889e000-7f3a688a2000 r--p 00000000 00:2d 253854599                  /home/ccx/lib/openmpi/mca_osc_pt2pt.so
+7f3a688a2000-7f3a688b7000 r-xp 00004000 00:2d 253854599                  /home/ccx/lib/openmpi/mca_osc_pt2pt.so
+7f3a688b7000-7f3a688ba000 r--p 00019000 00:2d 253854599                  /home/ccx/lib/openmpi/mca_osc_pt2pt.so
+7f3a688ba000-7f3a688bb000 r--p 0001b000 00:2d 253854599                  /home/ccx/lib/openmpi/mca_osc_pt2pt.so
+7f3a688bb000-7f3a688bc000 rw-p 0001c000 00:2d 253854599                  /home/ccx/lib/openmpi/mca_osc_pt2pt.so
+7f3a688bc000-7f3a688bf000 r--p 00000000 00:2d 253854603                  /home/ccx/lib/openmpi/mca_osc_ucx.so
+7f3a688bf000-7f3a688cc000 r-xp 00003000 00:2d 253854603                  /home/ccx/lib/openmpi/mca_osc_ucx.so
+7f3a688cc000-7f3a688ce000 r--p 00010000 00:2d 253854603                  /home/ccx/lib/openmpi/mca_osc_ucx.so
+7f3a688ce000-7f3a688cf000 r--p 00011000 00:2d 253854603                  /home/ccx/lib/openmpi/mca_osc_ucx.so
+7f3a688cf000-7f3a688d8000 rw-p 00012000 00:2d 253854603                  /home/ccx/lib/openmpi/mca_osc_ucx.so
+7f3a688d8000-7f3a688dc000 r--p 00000000 00:2d 253854601                  /home/ccx/lib/openmpi/mca_osc_rdma.so
+7f3a688dc000-7f3a688f7000 r-xp 00004000 00:2d 253854601                  /home/ccx/lib/openmpi/mca_osc_rdma.so
+7f3a688f7000-7f3a688fa000 r--p 0001f000 00:2d 253854601                  /home/ccx/lib/openmpi/mca_osc_rdma.so
+7f3a688fa000-7f3a688fb000 ---p 00022000 00:2d 253854601                  /home/ccx/lib/openmpi/mca_osc_rdma.so
+7f3a688fb000-7f3a688fc000 r--p 00022000 00:2d 253854601                  /home/ccx/lib/openmpi/mca_osc_rdma.so
+7f3a688fc000-7f3a688fd000 rw-p 00023000 00:2d 253854601                  /home/ccx/lib/openmpi/mca_osc_rdma.so
+7f3a688fe000-7f3a68901000 rw-s 00000000 00:13 442124                     /dev/shm/ucx_shm_posix_7994ac02 (deleted)
+7f3a68901000-7f3a68904000 rw-s 00000000 00:13 458265                     /dev/shm/ucx_shm_posix_6110a06a (deleted)
+7f3a68904000-7f3a68907000 rw-s 00000000 00:13 442114                     /dev/shm/ucx_shm_posix_33b6913c (deleted)
+7f3a68907000-7f3a6890a000 rw-s 00000000 00:13 458538                     /dev/shm/ucx_shm_posix_6a46c52d (deleted)
+7f3a6890a000-7f3a6890b000 r--p 00000000 00:2d 253266164                  /home/ccx/lib/libmca_common_sm.so.40.30.0
+7f3a6890b000-7f3a6890c000 r-xp 00001000 00:2d 253266164                  /home/ccx/lib/libmca_common_sm.so.40.30.0
+7f3a6890c000-7f3a6890d000 r--p 00002000 00:2d 253266164                  /home/ccx/lib/libmca_common_sm.so.40.30.0
+7f3a6890d000-7f3a6890e000 r--p 00002000 00:2d 253266164                  /home/ccx/lib/libmca_common_sm.so.40.30.0
+7f3a6890e000-7f3a6890f000 rw-p 00003000 00:2d 253266164                  /home/ccx/lib/libmca_common_sm.so.40.30.0
+7f3a6890f000-7f3a68911000 r--p 00000000 00:2d 253854565                  /home/ccx/lib/openmpi/mca_coll_sm.so
+7f3a68911000-7f3a68915000 r-xp 00002000 00:2d 253854565                  /home/ccx/lib/openmpi/mca_coll_sm.so
+7f3a68915000-7f3a68916000 r--p 00006000 00:2d 253854565                  /home/ccx/lib/openmpi/mca_coll_sm.so
+7f3a68916000-7f3a68917000 ---p 00007000 00:2d 253854565                  /home/ccx/lib/openmpi/mca_coll_sm.so
+7f3a68917000-7f3a68918000 r--p 00007000 00:2d 253854565                  /home/ccx/lib/openmpi/mca_coll_sm.so
+7f3a68918000-7f3a68919000 rw-p 00008000 00:2d 253854565                  /home/ccx/lib/openmpi/mca_coll_sm.so
+7f3a68919000-7f3a6891c000 r--p 00000000 00:2d 253854556                  /home/ccx/lib/openmpi/mca_coll_han.so
+7f3a6891c000-7f3a6892c000 r-xp 00003000 00:2d 253854556                  /home/ccx/lib/openmpi/mca_coll_han.so
+7f3a6892c000-7f3a68931000 r--p 00013000 00:2d 253854556                  /home/ccx/lib/openmpi/mca_coll_han.so
+7f3a68931000-7f3a68932000 r--p 00017000 00:2d 253854556                  /home/ccx/lib/openmpi/mca_coll_han.so
+7f3a68932000-7f3a68933000 rw-p 00018000 00:2d 253854556                  /home/ccx/lib/openmpi/mca_coll_han.so
+7f3a68933000-7f3a68938000 r--p 00000000 00:2d 253854570                  /home/ccx/lib/openmpi/mca_coll_tuned.so
+7f3a68938000-7f3a6893f000 r-xp 00005000 00:2d 253854570                  /home/ccx/lib/openmpi/mca_coll_tuned.so
+7f3a6893f000-7f3a68944000 r--p 0000c000 00:2d 253854570                  /home/ccx/lib/openmpi/mca_coll_tuned.so
+7f3a68944000-7f3a68945000 ---p 00011000 00:2d 253854570                  /home/ccx/lib/openmpi/mca_coll_tuned.so
+7f3a68945000-7f3a68946000 r--p 00011000 00:2d 253854570                  /home/ccx/lib/openmpi/mca_coll_tuned.so
+7f3a68946000-7f3a68947000 rw-p 00012000 00:2d 253854570                  /home/ccx/lib/openmpi/mca_coll_tuned.so
+7f3a68947000-7f3a68949000 r--p 00000000 00:2d 253854552                  /home/ccx/lib/openmpi/mca_coll_adapt.so
+7f3a68949000-7f3a68950000 r-xp 00002000 00:2d 253854552                  /home/ccx/lib/openmpi/mca_coll_adapt.so
+7f3a68950000-7f3a68952000 r--p 00009000 00:2d 253854552                  /home/ccx/lib/openmpi/mca_coll_adapt.so
+7f3a68952000-7f3a68953000 r--p 0000a000 00:2d 253854552                  /home/ccx/lib/openmpi/mca_coll_adapt.so
+7f3a68953000-7f3a68954000 rw-p 0000b000 00:2d 253854552                  /home/ccx/lib/openmpi/mca_coll_adapt.so
+7f3a68954000-7f3a68956000 r--p 00000000 00:2d 253854554                  /home/ccx/lib/openmpi/mca_coll_basic.so
+7f3a68956000-7f3a6895f000 r-xp 00002000 00:2d 253854554                  /home/ccx/lib/openmpi/mca_coll_basic.so
+7f3a6895f000-7f3a68961000 r--p 0000b000 00:2d 253854554                  /home/ccx/lib/openmpi/mca_coll_basic.so
+7f3a68961000-7f3a68962000 r--p 0000c000 00:2d 253854554                  /home/ccx/lib/openmpi/mca_coll_basic.so
+7f3a68962000-7f3a68963000 rw-p 0000d000 00:2d 253854554                  /home/ccx/lib/openmpi/mca_coll_basic.so
+7f3a68963000-7f3a68964000 r--p 00000000 00:2d 253854568                  /home/ccx/lib/openmpi/mca_coll_sync.so
+7f3a68964000-7f3a68966000 r-xp 00001000 00:2d 253854568                  /home/ccx/lib/openmpi/mca_coll_sync.so
+7f3a68966000-7f3a68967000 r--p 00003000 00:2d 253854568                  /home/ccx/lib/openmpi/mca_coll_sync.so
+7f3a68967000-7f3a68968000 r--p 00003000 00:2d 253854568                  /home/ccx/lib/openmpi/mca_coll_sync.so
+7f3a68968000-7f3a68969000 rw-p 00004000 00:2d 253854568                  /home/ccx/lib/openmpi/mca_coll_sync.so
+7f3a68969000-7f3a6896e000 r--p 00000000 00:2d 253854560                  /home/ccx/lib/openmpi/mca_coll_libnbc.so
+7f3a6896e000-7f3a68986000 r-xp 00005000 00:2d 253854560                  /home/ccx/lib/openmpi/mca_coll_libnbc.so
+7f3a68986000-7f3a6898b000 r--p 0001d000 00:2d 253854560                  /home/ccx/lib/openmpi/mca_coll_libnbc.so
+7f3a6898b000-7f3a6898c000 r--p 00021000 00:2d 253854560                  /home/ccx/lib/openmpi/mca_coll_libnbc.so
+7f3a6898c000-7f3a6898d000 rw-p 00022000 00:2d 253854560                  /home/ccx/lib/openmpi/mca_coll_libnbc.so
+7f3a6898d000-7f3a689b0000 rw-p 00000000 00:00 0 
+7f3a689b0000-7f3a689b1000 rw-p 00000000 00:00 0 
+7f3a689b1000-7f3a689b4000 rw-s 00000000 00:04 1802293                    /SYSV00000000 (deleted)
+7f3a689b5000-7f3a689b8000 rw-s 00000000 00:13 442310                     /dev/shm/ucx_shm_posix_b737ee7 (deleted)
+7f3a689b8000-7f3a689bb000 rw-s 00000000 00:13 458549                     /dev/shm/ucx_shm_posix_57b2cb8e (deleted)
+7f3a689bb000-7f3a689be000 rw-s 00000000 00:13 442145                     /dev/shm/ucx_shm_posix_3acfaa41 (deleted)
+7f3a689be000-7f3a689c1000 rw-s 00000000 00:13 458221                     /dev/shm/ucx_shm_posix_61558f76 (deleted)
+7f3a689c1000-7f3a689c4000 rw-s 00000000 00:13 442267                     /dev/shm/ucx_shm_posix_56f464a3 (deleted)
+7f3a689c4000-7f3a689cd000 rw-p 00000000 00:00 0 
+7f3a689cd000-7f3a689ce000 r--p 00000000 00:2d 253854562                  /home/ccx/lib/openmpi/mca_coll_self.so
+7f3a689ce000-7f3a689cf000 r-xp 00001000 00:2d 253854562                  /home/ccx/lib/openmpi/mca_coll_self.so
+7f3a689cf000-7f3a689d0000 r--p 00002000 00:2d 253854562                  /home/ccx/lib/openmpi/mca_coll_self.so
+7f3a689d0000-7f3a689d1000 r--p 00002000 00:2d 253854562                  /home/ccx/lib/openmpi/mca_coll_self.so
+7f3a689d1000-7f3a689d2000 rw-p 00003000 00:2d 253854562                  /home/ccx/lib/openmpi/mca_coll_self.so
+7f3a689d2000-7f3a689d3000 r--p 00000000 00:2d 253854558                  /home/ccx/lib/openmpi/mca_coll_inter.so
+7f3a689d3000-7f3a689d5000 r-xp 00001000 00:2d 253854558                  /home/ccx/lib/openmpi/mca_coll_inter.so
+7f3a689d5000-7f3a689d6000 r--p 00003000 00:2d 253854558                  /home/ccx/lib/openmpi/mca_coll_inter.so[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+[node02:47515] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f68b7050405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f68b6e25ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f68b56b6b0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(GOMP_parallel+0x3f) [0x7f68b704805f]
+./SeisSol_Release_shsw_6_elastic() [0x547ff4]
+./SeisSol_Release_shsw_6_elastic() [0x51f327]
+./SeisSol_Release_shsw_6_elastic() [0x5469b1]
+./SeisSol_Release_shsw_6_elastic() [0x573f57]
+./SeisSol_Release_shsw_6_elastic() [0x526376]
+./SeisSol_Release_shsw_6_elastic() [0x42acbd]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7f68b55da555]
+./SeisSol_Release_shsw_6_elastic() [0x42d457]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f73eed4e405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f73eeb23ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f73ed3b4b0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(GOMP_parallel+0x3f) [0x7f73eed4605f]
+./SeisSol_Release_shsw_6_elastic() [0x547ff4]
+./SeisSol_Release_shsw_6_elastic() [0x51f327]
+./SeisSol_Release_shsw_6_elastic() [0x5469b1]
+./SeisSol_Release_shsw_6_elastic() [0x573f57]
+./SeisSol_Release_shsw_6_elastic() [0x526376]
+./SeisSol_Release_shsw_6_elastic() [0x42acbd]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7f73ed2d8555]
+./SeisSol_Release_shsw_6_elastic() [0x42d457]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f406cb46405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f406c91bea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f406b1acb0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f406cb46405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f406c91bea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f406b1acb0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f406cb46405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f406c91bea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f406b1acb0d]
+
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(GOMP_parallel+0x3f) [0x7f406cb3e05f]
+./SeisSol_Release_shsw_6_elastic() [0x547ff4]
+./SeisSol_Release_shsw_6_elastic() [0x51f327]
+./SeisSol_Release_shsw_6_elastic() [0x5469b1]
+./SeisSol_Release_shsw_6_elastic() [0x573f57]
+./SeisSol_Release_shsw_6_elastic() [0x526376]
+./SeisSol_Release_shsw_6_elastic() [0x42acbd]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7f406b0d0555]
+./SeisSol_Release_shsw_6_elastic() [0x42d457]
+[node02:47523] *** Process received signal ***
+[node02:47523] Signal: Aborted (6)
+[node02:47523] Signal code: User function (kill, sigsend, abort, etc.) (0)
+[node02:47523] [ 0] /lib64/libc.so.6(+0x36400)[0x7f406b0e4400]
+[node02:47523] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x7f406b0e4387]
+[node02:47523] [ 2] /lib64/libc.so.6(abort+0x148)[0x7f406b0e5a78]
+[node02:47523] [ 3] /lib64/libc.so.6(+0x78f67)[0x7f406b126f67]
+[node02:47523] [ 4] /lib64/libc.so.6(+0x81329)[0x7f406b12f329]
+[node02:47523] [ 5] /lib64/libc.so.6(fclose+0x177)[0x7f406b11c247]
+[node02:47523] [ 6] /home/ccx/lib/libopen-pal.so.40(opal_show_help_vstring+0x20e)[0x7f406b01662e]
+[node02:47523] [ 7] /home/ccx/lib/libopen-rte.so.40(orte_show_help+0xc3)[0x7f406d00aec3]
+[node02:47523] [ 8] /home/ccx/lib/libmpi.so.40(MPI_Abort+0x6c)[0x7f406c85080c]
+[node02:47523] [ 9] ./SeisSol_Release_shsw_6_elastic[0x432482]
+[node02:47523] [10] ./SeisSol_Release_shsw_6_elastic[0x548c55]
+[node02:47523] [11] /lib64/libgomp.so.1(+0x16405)[0x7f406cb46405]
+[node02:47523] [12] /lib64/libpthread.so.0(+0x7ea5)[0x7f406c91bea5]
+[node02:47523] [13] /lib64/libc.so.6(clone+0x6d)[0x7f406b1acb0d]
+[node02:47523] *** End of error message ***
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(GOMP_parallel+0x3f) [0x7f1b6de5b05f]
+./SeisSol_Release_shsw_6_elastic() [0x547ff4]
+./SeisSol_Release_shsw_6_elastic() [0x51f327]
+./SeisSol_Release_shsw_6_elastic() [0x5469b1]
+./SeisSol_Release_shsw_6_elastic() [0x573f57]
+./SeisSol_Release_shsw_6_elastic() [0x526376]
+./SeisSol_Release_shsw_6_elastic() [0x42acbd]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7f1b6c3ed555]
+./SeisSol_Release_shsw_6_elastic() [0x42d457]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f1b6de63405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f1b6dc38ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f1b6c4c9b0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f1b6de63405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f1b6dc38ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f1b6c4c9b0d]
+
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f1b6de63405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f1b6dc38ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f1b6c4c9b0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f9ce9ad7405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f9ce98acea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f9ce813db0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f9ce9ad7405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f9ce98acea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f9ce813db0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f9ce9ad7405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f9ce98acea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f9ce813db0d]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(GOMP_parallel+0x3f) [0x7f9ce9acf05f]
+./SeisSol_Release_shsw_6_elastic() [0x547ff4]
+./SeisSol_Release_shsw_6_elastic() [0x51f327]
+./SeisSol_Release_shsw_6_elastic() [0x5469b1]
+./SeisSol_Release_shsw_6_elastic() [0x573f57]
+./SeisSol_Release_shsw_6_elastic() [0x526376]
+./SeisSol_Release_shsw_6_elastic() [0x42acbd]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7f9ce8061555]
+./SeisSol_Release_shsw_6_elastic() [0x42d457]
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Sun Feb 12 21:59:11, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7fe0234da405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7fe0232afea5]
+/lib64/libc.so.6(clone+0x6d) [0x7fe021b40b0d]
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7fe0234da405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7fe0232afea5]
+/lib64/libc.so.6(clone+0x6d) [0x7fe021b40b0d]
+[node02:47535:0:47618] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+
+
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7fe0234da405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7fe0232afea5]
+/lib64/libc.so.6(clone+0x6d) [0x7fe021b40b0d]
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(GOMP_parallel+0x3f) [0x7fe0234d205f]
+./SeisSol_Release_shsw_6_elastic() [0x547ff4]
+./SeisSol_Release_shsw_6_elastic() [0x51f327]
+./SeisSol_Release_shsw_6_elastic() [0x5469b1]
+./SeisSol_Release_shsw_6_elastic() [0x573f57]
+./SeisSol_Release_shsw_6_elastic() [0x526376]
+./SeisSol_Release_shsw_6_elastic() [0x42acbd]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7fe021a64555]
+./SeisSol_Release_shsw_6_elastic() [0x42d457]
+==== backtrace (tid:  47618) ====
+ 0 0x000000000004d455 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000006f040 opal_show_help_yylex()  ???:0
+ 2 0x000000000006e5a8 opal_show_help_vstring()  ???:0
+ 3 0x000000000002bec3 orte_show_help()  ???:0
+ 4 0x000000000006380c PMPI_Abort()  ???:0
+ 5 0x0000000000432482 utils::Logger::~Logger()  ???:0
+ 6 0x0000000000548c55 seissol::solver::FreeSurfaceIntegrator::calculateOutput()  FreeSurfaceIntegrator.cpp:0
+ 7 0x0000000000016405 omp_in_final()  ???:0
+ 8 0x0000000000007ea5 start_thread()  pthread_create.c:0
+ 9 0x00000000000feb0d __clone()  ???:0
+=================================
+[node02:47535] *** Process received signal ***
+[node02:47535] Signal: Segmentation fault (11)
+[node02:47535] Signal code:  (-6)
+[node02:47535] Failing at address: 0x3f80000b9af
+[node02:47535] [ 0] /lib64/libpthread.so.0(+0xf630)[0x7fe0232b7630]
+[node02:47535] [ 1] /home/ccx/lib/libopen-pal.so.40(opal_show_help_yylex+0x90)[0x7fe0219ab040]
+[node02:47535] [ 2] /home/ccx/lib/libopen-pal.so.40(opal_show_help_vstring+0x188)[0x7fe0219aa5a8]
+[node02:47535] [ 3] /home/ccx/lib/libopen-rte.so.40(orte_show_help+0xc3)[0x7fe02399eec3]
+[node02:47535] [ 4] /home/ccx/lib/libmpi.so.40(MPI_Abort+0x6c)[0x7fe0231e480c]
+[node02:47535] [ 5] ./SeisSol_Release_shsw_6_elastic[0x432482]
+[node02:47535] [ 6] ./SeisSol_Release_shsw_6_elastic[0x548c55]
+[node02:47535] [ 7] /lib64/libgomp.so.1(+0x16405)[0x7fe0234da405]
+[node02:47535] [ 8] /lib64/libpthread.so.0(+0x7ea5)[0x7fe0232afea5]
+[node02:47535] [ 9] /lib64/libc.so.6(clone+0x6d)[0x7fe021b40b0d]
+[node02:47535] *** End of error message ***
+[node02:47515] 18 more processes have sent help message help-mpi-api.txt / mpi-abort
+@node02:~/temp/ExamplesOld/Skull/skullorder6 $ 
+

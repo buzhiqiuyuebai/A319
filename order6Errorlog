@@ -1,0 +1,197 @@
+@node06:~/temp/ExamplesOld/plane/A319meshsize1m $ mpirun -np 112 ./SeisSol_Release_shsw_6_elastic parameters.par>/output/outmpi112cl1mnode06
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: node06
+--------------------------------------------------------------------------
+[node06:42125] 111 more processes have sent help message help-mpi-btl-openib.txt / no active ports found
+[node06:42125] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Rank:        0 | Warning | Ignoring space order from parameter file, using           6
+Mon Feb 13 03:39:09, Error: Detected Inf/NaN in free surface output. Aborting. Mon Feb 13 03:39:09, Error: Detected Inf/NaN in free surface output. Aborting. Mon Feb 13 03:39:09, Error: Detected Inf/NaN in free surface output. Aborting. 
+
+
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f8749f30405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f8749d05ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f8748596b0d]
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f8749f30405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f8749d05ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f8748596b0d]
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f8749f30405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f8749d05ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f8748596b0d]
+*** Error in `./SeisSol_Release_shsw_6_elastic': double free or corruption (!prev): 0x00007f7eb8000d80 ***
+======= Backtrace: =========
+/lib64/libc.so.6(--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    mpi-abort
+from the file:
+    help-mpi-api.txt
+But I couldn't find that topic in the file.  Sorry!
+--------------------------------------------------------------------------
+/home/ccx/lib/libopen-rte.so.40(orte_show_help+0xc3)[0x7f874a3f3ec3--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 85 in communicator MPI_COMM_WORLD
+with errorcode 134.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+/lib64/libc.so.6(clone+0x6d)[0x7f8748596b0d]
+======= Memory map: ========
+00400000-00411000 r--p 00000000 00:2d 258932815                          /home/ccx/temp/ExamplesOld/plane/A319meshsize1m/SeisSol_Release_shsw_6_elastic
+00411000-00d35000 r-xp 00011000 00:2d 258932815                          /home/ccx/temp/ExamplesOld/plane/A319meshsize1m/SeisSol_Release_shsw_6_elastic
+00d35000-0104e000 r--p 00935000 00:2d 258932815                          /home/ccx/temp/ExamplesOld/plane/A319meshsize1m/SeisSol_Release_shsw_6_elastic
+0104f000-01058000 r--p 00c4e000 00:2d 258932815                          /home/ccx/temp/ExamplesOld/plane/A319meshsize1m/SeisSol_Release_shsw_6_elastic
+01058000-01061000 rw-p 00c57000 00:2d 258932815                          /home/ccx/temp/ExamplesOld/plane/A319meshsize1m/SeisSol_Release_shsw_6_elastic
+01061000-0107d000 rw-p 00000000 00:00 0 
+02456000-4478a000 rw-p 00000000 00:00 0                                  [heap]
+7f7870000000-7f7870021000 rw-p 00000000 00:00 0 
+7f7870021000-7f7874000000 ---p 00000000 00:00 0 
+7f79f7ff8000-7f79f7ff9000 ---p 00000000 00:00 0 
+7f79f7ff9000-7f7a77ff9000 rw-p 00000000 00:00 0 
+7f7df8000000-7f7df8022000 rw-p 00000000 00:00 0 
+7f7df8022000-7f7dfc000000 ---p 00000000 00:00 0 
+7f7dfffff000-7f7e00000000 ---p 00000000 00:00 0 
+7f7e00000000-7f7e80000000 rw-p 00000000 00:00 0 
+7f7e80000000-7f7e80021000 rw-p 00000000 00:00 0 
+7f7e80021000-7f7e84000000 ---p 00000000 00:00 0 
+7f7e88000000-7f7e88021000 rw-p 00000000 00:00 0 
+7f7e88021000-7f7e8c000000 ---p 00000000 00:00 0 
+7f7e90000000-7f7e90021000 rw-p 00000000 00:00 0 
+7f7e90021000-7f7e94000000 ---p 00000000 00:00 0 
+7f7e98000000-7f7e98021000 rw-p 00000000 00:00 0 
+7f7e98021000-7f7e9c000000 ---p 00000000 00:00 0 
+7f7ea0000000-7f7ea0021000 rw-p 00000000 00:00 0 
+7f7ea0021000-7f7ea4000000 ---p 00000000 00:00 0 
+7f7ea8000000-7f7ea8021000 rw-p 00000000 00:00 0 
+7f7ea8021000-7f7eac000000 ---p 00000000 00:00 0 
+7f7eb0000000-7f7eb0021000 rw-p 00000000 00:00 0 
+7f7eb0021000-7f7eb4000000 ---p 00000000 00:00 0 
+7f7eb8000000-7f7eb8021000 rw-p 00000000 00:00 0 
+7f7eb8021000-7f7ebc000000 ---p 00000000 00:00 0 
+7f7ec0000000-7f7ec0021000 rw-p 00000000 00:00 0 
+7f7ec0021000-7f7ec4000000 ---p 00000000 00:00 0 
+7f7ec8000000-7f7ec8021000 rw-p 00000000 00:00 0 
+7f7ec8021000-7f7ecc000000 ---p 00000000 00:00 0 
+7f7ed0000000-7f7ed0021000 rw-p 00000000 00:00 0 
+7f7ed0021000-7f7ed4000000 ---p 00000000 00:00 0 
+7f7ed4212000-7f7ffbb11000 rw-p 00000000 00:00 0 
+7f7ffbb11000-7f7ffbf2a000 rw-s 00000000 00:13 1252361                    /dev/shm/ucx_shm_posix_22f0d44 (deleted)
+7f7ffbf2a000-7f7ffc343000 rw-s 00000000 00:13 1236893                    /dev/shm/ucx_shm_posix_f306bd7 (deleted)
+7f7ffc343000-7f7ffc75c000 rw-s 00000000 00:13 1252362                    /dev/shm/ucx_shm_posix_3e03ac81 (deleted)
+7f8003982000-7f8003d9b000 rw-s 00000000 00:13 1236917                    /dev/shm/ucx_shm_posix_1015aad3 (deleted)
+7f8003d9b000-7f80041b4000 rw-s 00000000 00:13 1244153                    /dev/shm/ucx_shm_posix_22bae75 (deleted)
+7f80041b4000-7f80045cd000 rw-s 00000000 00:13 1252360                    /dev/shm/ucx_shm_posix_442a82d5 (deleted)
+7f80045cd000-7f80049e6000 rw-s 00000000 00:13 1236918                    /dev/shm/ucx_shm_posix_3a5ce0e6 (deleted)
+7f80049e6000-7f8004dff000 rw-s 00000000 00:13 1252367                    /dev/shm/ucx_shm_posix_3b59ec78 (deleted)
+7f8004dff000-7f8005218000 rw-s 00000000 00:13 1252366                    /dev/shm/ucx_shm_posix_640b18ad (deleted)
+7f8005218000-7f8005631000 rw-s 00000000 00:13 1248685                    /dev/shm/ucx_shm_posix_42e5a03d (deleted)
+7f8005631000-7f8005a4a000 rw-s 00000000 00:13 1236916                    /dev/shm/ucx_shm_posix_637f57ef (deleted)
+7f8005a4a000-7f8005e63000 rw-s 00000000 00:13 1236900                    /dev/shm/ucx_shm_posix_60f8d83b (deleted)
+7f8005e63000-7f800627c000 rw-s 00000000 00:13 1250382                    /dev/shm/ucx_shm_posix_30b6f317 (deleted)
+7f800627c000-7f8006695000 rw-s 00000000 00:13 1250380                    /dev/shm/ucx_shm_posix_33aaef28 (deleted)
+7f8006695000-7f8006aae000 rw-s 00000000 00:13 1248679                    /dev/shm/ucx_shm_posix_1e3c8cbd (deleted)
+7f8006aae000-7f8006ec7000 rw-s 00000000 00:13 1244160                    /dev/shm/ucx_shm_posix_1151e802 (deleted)
+7f8006ec7000-7f80072e0000 rw-s 00000000 00:13 1248678                    /dev/shm/ucx_shm_posix_7e2a0703 (deleted)
+7f80072e0000-7f80076f9000 rw-s 00000000 00:13 1252354                    /dev/shm/ucx_shm_posix_71fe08f1 (deleted)
+7f80076f9000-7f8007b12000 rw-s 00000000 00:13 1248671                    /dev/shm/ucx_shm_posix_5c5996fe (deleted)
+7f8007b12000-7f8007f2b000 rw-s 00000000 00:13 1252353                    /dev/shm/ucx_shm_posix_3516dbef (deleted)
+7f8007f2b000-7f8008344000 rw-s 00000000 00:13 1250387                    /dev/shm/ucx_shm_posix_7f2e4b6a (deleted)
+7f8008344000-7f800875d000 rw-s 00000000 00:13 1236906                    /dev/shm/ucx_shm_posix_221187d1 (deleted)
+7f800d778000-7f800db91000 rw-s 00000000 00:13 1250379                    /dev/shm/ucx_shm_posix_196ec076 (deleted)
+7f800db91000-7f800dfaa000 rw-s 00000000 00:13 1236912                    /dev/shm/ucx_shm_posix_601c7045 (deleted)
+7f800dfaa000-7f800e3c3000 rw-s 00000000 00:13 1248680                    /dev/shm/ucx_shm_posix_2bba158 (deleted)
+7f800e3c3000-7f800e7dc000 rw-s 00000000 00:13 1244151                    /dev/shm/ucx_shm_posix_2bc93b52 (deleted)
+7f800e7dc000-7f800ebf5000 rw-s 00000000 00:13 1248660                    /dev/shm/ucx_shm_posix_590e508 (deleted)
+7f800ebf5000-7f800f00e000 rw-s 00000000 00:13 1236892                    /dev/shm/ucx_shm_posix_d16820a (deleted)
+7f800f00e000-7f800f427000 rw-s 00000000 00:13 1236913                    /dev/shm/ucx_shm_posix_12d2a571 (deleted)
+7f800f5cf000-7f800f9e8000 rw-s 00000000 00:13 1248664                    /dev/shm/ucx_shm_posix_25ed8f4f (deleted)
+7f800f9e8000-7f800fe01000 rw-s 00000000 00:13 1252359                    /dev/shm/ucx_shm_posix_5267bb69 (deleted)
+7f800fe01000-7f801021a000 rw-s 00000000 00:13 1250395                    /dev/shm/ucx_shm_posix_7dd8757c (deleted)
+7f801021a000-7f8010633000 rw-s 00000000 00:13 1248677                    /dev/shm/ucx_shm_posix_17e8b249 (deleted)
+7f8010633000-7f8010a4c000 rw-s 00000000 00:13 1252358                    /dev/shm/ucx_shm_posix_21462253 (deleted)
+7f8010a4c000-7f8010e65000 rw-s 00000000 00:13 1250394                    /dev/shm/ucx_shm_posix_50a261ab (deleted)
+7f8010e65000-7f801127e000 rw-s 00000000 00:13 1236910                    /dev/shm/ucx_shm_posix_26561c50 (deleted)
+7f801127e000-7f8011697000 rw-s 00000000 00:13 1248676                    /dev/shm/ucx_shm_posix_2646511f (deleted)
+7f8011697000-7f8011ab0000 rw-s 00000000 00:13 1236914                    /dev/shm/ucx_shm_posix_2d8c3322 (deleted)
+7f8011ab0000-7f8011ec9000 rw-s 00000000 00:13 1248681                    /dev/shm/ucx_shm_posix_15d94dc5 (deleted)
+7f8011ec9000-7f80122e2000 rw-s 00000000 00:13 1250400                    /dev/shm/ucx_shm_posix_1d860ad5 (deleted)
+7f80122e2000-7f80126fb000 rw-s 00000000 00:13 1248684                    /dev/shm/ucx_shm_posix_2bdced48 (deleted)
+7f80126fb000-7f8012b14000 rw-s 00000000 00:13 1236911                    /dev/shm/ucx_shm_posix_35ad947f (deleted)
+7f8012b14000-7f8012f2d000 rw-s 00000000 00:13 1252364                    /dev/shm/ucx_shm_posix_7e9aa6c6 (deleted)
+7f8012f2d000-7f8013346000 rw-s 00000000 00:13 1250399                    /dev/shm/ucx_shm_posix_1ac0ccac (deleted)
+7f8013346000-7f801375f000 rw-s 00000000 00:13 1248683                    /dev/shm/ucx_shm_posix_a3498f0 (deleted)
+7f80145a4000-7f8019b36000 rw-p 00000000 00:00 0 
+7f8019b36000-7f8019f4f000 rw-s 00000000 00:13 1250392                    /dev/shm/ucx_shm_posix_4bca8a79 (deleted)
+7f801a12f000-7f801a548000 rw-s 00000000 00:13 1248662                    /dev/shm/ucx_shm_posix_2a2a848c (deleted)
+7f801a548000-7f801a961000 rw-s 00000000 00:13 1248668                    /dev/shm/ucx_shm_posix_2019930c (deleted)
+7f801a961000-7f801ad7a000 rw-s 00000000 00:13 1248670                    /dev/shm/ucx_shm_posix_49e3c9eb (deleted)
+7f801ad7a000-7f801b193000 rw-s 00000000 00:13 1252357                    /dev/shm/ucx_shm_posix_45d5ba1b (deleted)
+7f801b193000-7f801b5ac000 rw-s 00000000 00:13 1244152                    /dev/shm/ucx_shm_posix_7984dd25 (deleted)
+7f801b5ac000-7f801b9c5000 rw-s 00000000 00:13 1236895                    /dev/shm/ucx_shm_posix_24ca18cd (deleted)
+7f801d9aa000-7f8022f26000 rw-p 00000000 00:00 0 
+7f8022f26000-7f802333f000 rw-s 00000000 00:13 1236907                    /dev/shm/ucx_shm_posix_4944630c (deleted)
+7f802333f000-7f8023758000 rw-s 00000000 00:13 1248673                    /dev/shm/ucx_shm_posix_5658472e (deleted)
+7f8023758000-7f8023b71000 rw-s 00000000 00:13 1250389                    /dev/shm/ucx_shm_posix_109d9490 (deleted)
+7f8023b71000-7f8023f8a000 rw-s 00000000 00:13 1236899                    /dev/shm/ucx_shm_posix_29a857f0 (deleted)
+7f8023f8a000-7f80243a3000 rw-s 00000000 00:13 1244157                    /dev/shm/ucx_shm_posix_26dd352f (deleted)
+7f80243a3000-7f80247bc000 rw-s 00000000 00:13 1250384                    /dev/shm/ucx_shm_posix_58012574 (deleted)
+7f80247c7000-7f8024be0000 rw-s 00000000 00:13 1248661                    /dev/shm/ucx_shm_posix_1b4bc41c (deleted)
+7f8024be0000-7f8024ff9000 rw-s 00000000 00:13 1244149                    /dev/shm/ucx_shm_posix_7552742c (deleted)
+7f8024ff9000-7f8025412000 rw-s 00000000 00:13 1236898                    /dev/shm/ucx_shm_posix_77baeffa (deleted)
+7f8025412000-7f802582b000 rw-s 00000000 00:13 1248675                    /dev/shm/ucx_shm_posix_13232dd3 (deleted)
+7f802582b000-7f8025c44000 rw-s 00000000 00:13 1244156                    /dev/shm/ucx_shm_posix_118cb5bb (deleted)
+7f8025c44000-7f802605d000 rw-s 00000000 00:13 1236908                    /dev/shm/ucx_shm_posix_4fe8a475 (deleted)
+7f802605d000-7f8026476000 rw-s 00000000 00:13 1248666                    /dev/shm/ucx_shm_posix_365ebde6 (deleted)
+7f8026476000-7f802688f000 rw-s 00000000 00:13 1250393                    /dev/shm/ucx_shm_posix_68b7f49c (deleted)
+7f802688f000-7f8026ca8000 rw-s 00000000 00:13 1248669                    /dev/shm/ucx_shm_posix_448e2f1f (deleted)
+7f8026ca8000-7f80270c1000 rw-s 00000000 00:13 1252355                    /dev/shm/ucx_shm_posix_32274f00 (deleted)
+7f80270c1000-7f80274da000 rw-s 00000000 00:13 1248665                    /dev/shm/ucx_shm_posix_48915501 (deleted)
+7f80274da000-7f80278f3000 rw-s 00000000 00:13 1236894                    /dev/shm/ucx_shm_posix_613da63b (deleted)
+7f80278f3000-7f8027d0c000 rw-s 00000000 00:13 1250386                    /dev/shm/ucx_shm_posix_4c4ebecf (deleted)
+7f8027d0c000-7f8028125000 rw-s 00000000 00:13 1236905                    /dev/shm/ucx_shm_posix_104968ca (deleted)
+7f8028125000-7f802853e000 rw-s 00000000 00:13 1236904                    /dev/shm/ucx_shm_posix_4479b0fc (deleted)
+7f802853e000-7f8028957000 rw-s 00000000 00:13 1250377                    /dev/shm/ucx_shm_posix_5cf93eb2 (deleted)
+7f8028957000-7f8028d70000 rw-s 00000000 00:13 1248659                    /dev/shm/ucx_shm_posix_38fdb92f (deleted)
+7f8028d70000-7f8029189000 rw-s 00000000 00:13 1236890                    /dev/shm/ucx_shm_posix_1925f10d (deleted)
+7f8029189000-7f80295a2000 rw-s 00000000 00:13 1236903                    /dev/shm/ucx_shm_posix_5bbee389 (deleted)
+7f80295a2000-7f80299bb000 rw-s 00000000 00:13 1248672                    /dev/shm/ucx_shm_posix_7a2580f2 (deleted)
+7f80299bb000-7f8029dd4000 rw-s 00000000 00:13 1250391                    /dev/shm/ucx_shm_posix_3b799b5c (deleted)
+7f8029dd4000-7f802a1ed000 rw-s 00000000 00:13 1248663                    /dev/shm/ucx_shm_posix_36ecf99a (deleted)
+7f802a1ed000-7f802a606000 rw-s 00000000 00:13 1252356                    /dev/shm/ucx_shm_posix_48e03aad (deleted)
+7f802a606000-7f802aa1f000 rw-s 00000000 00:13 1250390                    /dev/shm/ucx_shm_posix_3d29f67b (deleted)
+7f802aa1f000-7f802ae38000 rw-s 00000000 00:13 1250385                    /dev/shm/ucx_shm_posix_319bec86 (deleted)
+7f802ae38000-7f802b251000 rw-s 00000000 00:13 1250383                    /dev/shm/ucx_shm_posix_421376e0 (deleted)
+7f802b2d5000-7f802b6ee000 rw-s 00000000 00:13 1252363                    /dev/shm/ucx_shm_posix_58a12563 (deleted)
+7f802b6ee000-7f802bb07000 rw-s 00000000 00:13 1250398                    /dev/shm/ucx_shm_posix_6bc91a00 (deleted)
+7f802bb07000-7f802bf20000 rw-s 00000000 00:13 1252365                    /dev/shm/ucx_shm_posix_5c154665 (deleted)
+7f802bf20000-7f802c339000 rw-s 00000000 00:13 1236915                    /dev/shm/ucx_shm_posix_2c4dd6df (deleted)
+7f802c339000-7f802c752000 rw-s 00000000 00:13 1248682                    /dev/shm/ucx_shm_posix_79825cf4 (deleted)
+7f802c752000-7f802cb6b000 rw-s 00000000 00:13 1250397                    /dev/shm/ucx_shm_posix_7d4b52c (deleted)
+7f802cb6b000-7f802cf84000 rw-s 00000000 00:13 1250396                    /dev/shm/ucx_shm_posix_56820fc8 (deleted)
+7f802cf84000-7f802d39d000 rw-s 00000000 00:13 1250388                    /dev/shm/ucx_shm_posix_a0881eb (deleted)
+7f802d39d000-7f802d7b6000 rw-s 00000000 00:13 1244159                    /dev/shm/ucx_shm_posix_4b4ccace (deleted)
+7f802d7b6000-7f802dbcf000 rw-s 00000000 00:13 1236902                    /dev/shm/ucx_shm_posix_6019734c (deleted)
+7f802dbcf000-[node06:42125] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2198
+Mon Feb 13 03:39:09, Error: Detected Inf/NaN in free surface output. Aborting. 
+Backtrace:
+./SeisSol_Release_shsw_6_elastic() [0x43206d]
+./SeisSol_Release_shsw_6_elastic() [0x548c55]
+/lib64/libgomp.so.1(+0x16405) [0x7f8749f30405]
+/lib64/libpthread.so.0(+0x7ea5) [0x7f8749d05ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7f8748596b0d]
+[node06:42125] 2 more processes have sent help message help-mpi-api.txt / mpi-abort
+
